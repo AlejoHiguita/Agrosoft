@@ -4,7 +4,7 @@
 
 <%
     
-String men=request.getAttribute("mensaje");
+
 String user =request.getParameter("txtusuario");
 String nombre =request.getParameter("txtnombre");   
 String clave =request.getParameter("txtclave");   
@@ -47,6 +47,23 @@ Usuario miusuario=
     <body>
        
         <form  name="frmusuario" method="POST"  action="./UsuarioServlet" >
+            
+<center>
+    <i>
+    <h1>
+    Administracion de usuarios del sistema 
+    </h1>
+   </i>
+</center>
+            <hr>
+            <br>
+            
+            <div style="width: 20%; margin: 0 auto;  height:1px; float:left;">
+       <jsp:include page="FBotones.jsp" flush="true"/>
+   </div>
+            <fieldset>
+             <legend align= "center"><i>Información de los usuarios </i> </legend>
+             <center>
             <table border="1">
                     <tr>
                         <td>Usuario(*)</td>                                            <!--Al presionar tecla ---->   
@@ -81,9 +98,12 @@ Usuario miusuario=
                         <td></td>
                     </tr>
             </table>
-                        <jsp:include page="FBotones.jsp" flush="true"/>    
+                        </center>
+                        </fieldset>
+                        <br>
+                        <br>
            
-            </form> 
+                        <center> 
          <%if(LU!=null){%>
             <table border="1">
                 <tr>
@@ -107,6 +127,8 @@ Usuario miusuario=
             </table>
             <%}%>
             <table><tr><td></td></tr></table>
+                        </center>
+            </form> 
     </body>
 </html>
                              
