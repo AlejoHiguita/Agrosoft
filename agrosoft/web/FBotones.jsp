@@ -2,7 +2,7 @@
 <table>
 <tr>
 <td>
-<button style='font-family:Arial; font-size:20px; width:100px; height:40px; background:; border-radius:10px' type="submit" name="action" value="buscar">
+<button style='font-family:Arial; font-size:20px; width:100px; height:40px; background:#D3D3D3; border-radius:10px' type="submit" name="action" value="buscar">
 Buscar
 </button>
 </td>
@@ -19,7 +19,7 @@ Buscar
 
 <tr>
 <td> 
-<button style='font-family:Arial; font-size:20px; width:100px; height:40px; background:; border-radius:10px' type="submit"  name="action" value="grabar">
+<button style='font-family:Arial; font-size:20px; width:100px; height:40px; background:#D3D3D3; border-radius:10px' type="submit"  name="action" value="grabar">
 Guardar
 </button>
 </td>
@@ -38,7 +38,7 @@ Guardar
 
 <tr>
 <td>
-<button style='font-family:Arial; font-size:20px; width:100px; height:40px; background:; border-radius:10px' type="submit"  name="action" value="modificar">
+<button style='font-family:Arial; font-size:20px; width:100px; height:40px; background:#D3D3D3; border-radius:10px' type="submit"  name="action" value="modificar">
 Modificar
 </button>
 </td>
@@ -55,7 +55,7 @@ Modificar
 
 <tr>
 <td> 
-<button style='font-family:Arial; font-size:20px; width:100px; height:40px; background:; border-radius:10px' type="submit"  name="action" value="bloquear">
+<button style='font-family:Arial; font-size:20px; width:100px; height:40px; background:#D3D3D3; border-radius:10px' type="submit"  name="action" value="bloquear">
 Eliminar
 </button>
 </td>
@@ -71,7 +71,7 @@ Eliminar
 </tr>
 
 <td> 
-<button style='font-family:Arial; font-size:20px;width:100px; height:40px; background:; border-radius:10px'style='width:100 px; height:40px' type="submit"  name="action" value="nuevo">
+<button style='font-family:Arial; font-size:20px;width:100px; height:40px; background:#D3D3D3; border-radius:10px'style='width:100 px; height:40px' type="submit"  name="action" value="nuevo">
 Nuevo
 </button>
 </td>
@@ -88,7 +88,7 @@ Nuevo
 
 <tr>
 <td> 
-<button style='padding:10px 10px; border-bottom-style: solid;font-family:Arial; font-size:20px; width:100px; height:40px; background:; border-radius:10px' type="submit"  name="action" value="mostrar">
+<button style='padding:10px 10px; border-bottom-style: solid;font-family:Arial; font-size:20px; width:100px; height:40px; background:#D3D3D3; border-radius:10px' type="submit"  name="action" value="mostrar">
 Mostrar
 </button>
 </td> 
