@@ -8,6 +8,6 @@ Manual de usuario
     <h3>
     <center>
     Presiona el link a continuacion para abrir el manual de usuario.
-    <a href="MU/Manual_de_usuario.pdf">Manual de usuario.</a>
+    <a href="MU/Manual_de_usuario.pdf">Manual de usuario</a>
     </center>
     </h3>

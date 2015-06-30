@@ -58,7 +58,7 @@ Correo_elec = "";
 <script type="text/javascript" src="js/validar.js"></script>   
 <style type="text/css">
 
-th{color:white;font-family: Arial;font-size: 100%;}
+th{color:black;font-family: Arial;font-size: 100%;}
 input{border-radius:3px;}
 select{border-radius: 3px;}
 </style>

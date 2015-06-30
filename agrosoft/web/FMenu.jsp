@@ -60,7 +60,6 @@ Perfil iniciado:
    <li><a href="./VentasServlet?action=mostrar" title="Ventas">Ventas</a></li>
    <li><a href="./ProveedorServlet?action=mostrar" title="Proveedores">Proveedores</a></li>
    <li><a href="./MascotasServlet?action=mostrar" title="Mascota">Mascota</a></li>
-   <li><a href="./HistorialMedicoServlet?action=mostrar" title="Historial Médico">Historial Medico</a></li>
    <%}%>
    <li><a href="./UsuarioServlet?action=salir" title="Cerrar sesion">Cerrar Sesion</a></li>
    <%}else{%>
