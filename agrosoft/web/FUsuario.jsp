@@ -64,19 +64,27 @@ Usuario miusuario=
             <fieldset>
              <legend align= "center"><i>Información de los usuarios </i> </legend>
              <center>
-            <table border="1">
+            <table>
                     <tr>
-                        <td>Usuario(*)</td>                                            <!--Al presionar tecla ---->   
+                        <td>Usuario</td>                                            <!--Al presionar tecla ---->   
                         <td><input type="text" name="txtusuario" maxlength="10" size="10"  value="<%=user%>" ></td>
-                        <td>Nombre(*)</td>                                            <!--Al presionar tecla ---->   
+                        <td>Nombre</td>                                            <!--Al presionar tecla ---->   
                         
                         <td><input type="text" name="txtnombre" maxlength="20" size="10" onkeypress="return sololetras(event)" value="<%=nombre%>"> </td>
 
                     </tr>
+                    <tr><td></td>
+                    </tr>
+                    <tr><td></td>
+                    </tr>
+                    <tr><td></td>
+                    </tr>
                     <tr>
-                        <td>Clave(*)</td>
+                    </tr>
+                    <tr>
+                        <td>Clave</td>
                         <td><input type="text" name="txtclave" size="10" maxlength="5" value="<%=clave%>">  </td>
-                        <td>Perfil(*)</td>
+                        <td>Perfil</td>
                         <td><select name="cboperfil">
                                 <option value="">Seleccione</option>    
                                 <option value="Admin">Administrador</option>    
@@ -85,6 +93,11 @@ Usuario miusuario=
                                 <option value="Invitado">Invitado</option>    
                             </select>
                         </td>
+                    </tr>
+                    <tr>
+                    </tr><tr><td></td>
+                    </tr><tr><td></td>
+                    </tr><tr><td></td>
                     </tr>
                     <tr>
                         <td>Estado</td>
