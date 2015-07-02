@@ -6,6 +6,13 @@ import Agrosoft.persistencia.DaosArticulo;
 import Agrosoft.utilidades.Conexion;
 import java.util.List;
 
+/**
+* 
+*
+* @version 2.2 01/07/2015
+* @author Alejandro H.
+**/
+
 public class ArticuloN {
 DaosArticulo dao;  
 Conexion c= new Conexion();

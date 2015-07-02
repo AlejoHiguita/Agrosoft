@@ -8,6 +8,13 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+* 
+*
+* @version 2.2 01/07/2015
+* @author Alejandro H.
+**/
+
 
 
 
