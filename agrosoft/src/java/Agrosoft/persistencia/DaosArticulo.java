@@ -8,13 +8,28 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Esta clase nos va permitir
+ * crear metodos los cuales van a
+ * conectarse con la base de datos,  y otros
+ * archivos que lo procesen para hacer con 
+ * los datos lo que se requiera.
+ * 
+ * @version 2.2 01/07/2015
+ * @author Alejandro H
+ */
 
 public class DaosArticulo {
 
 public DaosArticulo (){
 }//fin constructor Daos
-// Método para listar datos
 
+/**
+ * este metodo resive un parametro
+ * @param con
+ * @return retorna una respuesta
+ */
+// Método para listar datos
 public List<Articulo>ListaArticulo(Connection con)
 {
 List<Articulo> resultado= new ArrayList<Articulo>();
@@ -80,6 +95,14 @@ catch(Exception cl)
 return a;
 }//fin buscar
 
+/**
+ * Este metodo crea un numero consecutivo
+ * resive un solo parametro
+ * @param con
+ * @return retorna una respuesta
+ * contiene mensajes de error
+ */
+
 
 public String getConsecutivo(Connection con)
 {
@@ -101,7 +124,16 @@ catch(Exception cl)
 {} 
 }//fin finally
 return a;
-}//fin buscar
+}//fin consecutivo
+
+/**
+ * Este metodovalida si existe el articulo 
+ * buscado y resive estos parametros
+ * @param con
+ * @param idcodigo
+ * @return retorna una respuesta
+ * y contiene mensajes de error
+ */
 
 public boolean getValidarSiExisteArticulo(Connection con,String idcodigo)
 {
@@ -125,6 +157,19 @@ catch(Exception cl)
 return a;
 }//validarSiexiste
 
+/**
+ * Este metodo sirve para guardar articulos y
+ * estos parametros son los que resive la clase 
+ * @param con
+ * @param codigo
+ * @param nombre
+ * @param descripcion
+ * @param observacion
+ * @param precio
+ * @param codigo_mascota
+ * @return retorna una respuesta.
+ * tambien maneja mensajes de error
+ */
 public String guardarArticulo(
         Connection con,
         String codigo,
@@ -155,7 +200,19 @@ respuesta=""+ e.getMessage()+"causa"+e.getCause();
 return respuesta;
 }
 
-
+/**
+ * Este metodo permite actualizar articulos
+ * y resive estos parametros
+ * @param con
+ * @param codigo
+ * @param nombre
+ * @param descripcion
+ * @param observacion
+ * @param precio
+ * @param codigo_mascota
+ * @return retorna una respuesta
+ * y contiene mensajes de error
+ */
 
 public String actualizarArticulo(
         Connection con,
@@ -191,7 +248,14 @@ if(p.getUpdateCount()>0){
 return respuesta;
 }//fin actualizarProducto
 
-
+/**
+ * Este metodo permite eiminar articulos
+ * y resive dos parametros
+ * @param con
+ * @param codigo
+ * @return retorna una respuesta
+ * y contiene mensajes de error
+ */
 public String eliminarArticulo(  Connection con, String codigo){
 String respuesta="";
 try{

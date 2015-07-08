@@ -14,6 +14,7 @@ package Agrosoft.persistencia;
  * @version 2.2 01/07/2015
  * @author Alejandro H
  */
+
 public class SQLHelpersArticulo {
 public static String getArticulo(){
 return "SELECT codigo, nombre, "
@@ -26,13 +27,13 @@ return "SELECT codigo, nombre, "
         + " descripcion, observacion, precio, codigo_mascota "
         + " from tblArticulo where codigo='"+Codigo+"' ";
        
-/*Utilizamos '"+user+"' para enviar un
- Parámetro de tipo String
+/**Utilizamos '"+Codigo+"' para enviar un
+ * Parámetro de tipo String
  * en caso de ser un valor numérico es recomendable
  * usar "+vlornumerico +"
  */
 
-}// fin buscar producto
+}// fin buscar Articulo
 
     public static String getInsertarArticulo() {
     return"INSERT INTO tblArticulo(codigo, nombre,descripcion, observacion,precio,codigo_mascota) values "
@@ -43,7 +44,7 @@ return "SELECT codigo, nombre, "
      return"UPDATE tblArticulo set nombre=?,descripcion=?, observacion=?,precio=?, codigo_mascota=? "
         + "   where codigo=?";
 
-}//fin getActualizarUsuario
+}//fin getActualizarArticulo
 
 public static String getEliminarArticulo(String codigo ){
 return "DELETE from tblArticulo "

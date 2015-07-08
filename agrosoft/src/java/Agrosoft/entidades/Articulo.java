@@ -19,17 +19,22 @@ String descripcion;
 String observacion;
 String Precio;
 String codigo_mascota;
-/**
- * Se definieron variables
- * de tipo String.
- */
-	    
-           
-public Articulo () {}
-/**
- * Metodo vacio
- */
 
+ /* Se definieron variables
+  de tipo String*/
+	    
+/* Metodo vacio*/
+public Articulo () {}
+
+/**
+ * Este metodo resive parametros
+ * @param codigo
+ * @param nombre
+ * @param Precio
+ * @param descripcion
+ * @param observacion
+ * @param codigo_mascota 
+ */
     public Articulo(String codigo, String nombre, String Precio, String descripcion, String observacion, String codigo_mascota) {
         this.codigo = codigo;
         this.nombre = nombre;
@@ -38,104 +43,101 @@ public Articulo () {}
         this.Precio = Precio;
         this.codigo_mascota = codigo_mascota;
     }
-/**
- * Este metodo recive las variables ya definidas
- * dentro de la clase y les da un valor a estas.
- */
  
-
+/**
+ * Este metodo retorna la variable Codigo
+ * @return Codigo
+ */
     public String getCodigo() {
         return codigo;
     }
  /**
- * Este metodo retorna 
- * la variable codigo.
- */
+  * Este metodo resive el parametro Codigo
+  * @param codigo 
+  */
 
     public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
+  
  /**
- * Este metodo le da valor a
- * la variable codigo.
- */
-
+  * Este metodo retorna la variable nombre
+  * @return nombre
+  */
     public String getNombre() {
         return nombre;
     }
- /**
- * Este metodo retorna 
- * la variable nombre.
+ 
+/**
+ * Este metodo resive un parametro nombre
+ * @param nombre 
  */
-
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
- /**
- * Este metodo le da valor a
- * la variable nombre.
+/**
+ * Este metodo retorna la variable descripcion
+ * @return descripcion
  */
     public String getDescripcion() {
         return descripcion;
     }
-    /**
- * Este metodo retorna
- * la variable descripcion.
- */
 
+/**
+ * Este metodo resive el parametro  descripcion
+ * @param descripcion 
+ */
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+
     /**
- * Este metodo le da valor a
- * la variable descripcion.
- */
+     * Este metodo retorna la variable descripcion
+     * @return descripcion
+     */
     public String getObservacion() {
         return observacion;
     }
-    /**
- * Este metodo retorna
- * la variable observacion.
+  
+/**
+ * Este metodo resive un parametro obsevacion
+ * @param observacion 
  */
-
-    public void setObservacion(String observacion) {
+  public void setObservacion(String observacion) {
         this.observacion = observacion;
     }
-    /**
- * Este metodo le da valor a
- * la variable observacion.
- */
+   
+  /**
+   * Este metodo retorna precio
+   * @return precio
+   */
    public String getPrecio() {
         return Precio;
     }
-   /**
- * Este metodo retorna
- * la variable precio.
+   
+   
+/**
+ * Este metodo resive el parametro precio
+ * @param Precio 
  */
-
     public void setPrecio(String Precio) {
         this.Precio = Precio;
     }
-    /**
- * Este metodo le da valor a
- * la variable precio.
+  
+/**
+ * Este metodo retorna codigo_mascota
+ * @return codigo_mascota
  */
-
     public String getCodigo_mascota() {
         return codigo_mascota;
     }
-    /**
- * Este metodo retorna
- * la variable codigo_mascota.
+   
+/**
+ * Este metodo resive un parametro codigo_mascota
+ * @param codigo_mascota 
  */
-
     public void setCodigo_mascota(String codigo_mascota) {
         this.codigo_mascota = codigo_mascota;
-    }
-    /**
- * Este metodo le da valor a
- * la variable codigo_mascota.
- */
-  
+    }  
     
 }//fin de la clase

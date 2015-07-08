@@ -7,31 +7,57 @@ import Agrosoft.utilidades.Conexion;
 import java.util.List;
 
 /**
-* 
-*
-* @version 2.2 01/07/2015
-* @author Alejandro H.
-**/
+ * Esta clase nos va permitir
+ * crear metodos los cuales van a
+ * conectarse con la base de datos, 
+ * con el daos y van a permitir insertar,
+ * eliminar y modificar los datos.
+ * 
+ * @version 2.2 01/07/2015
+ * @author Alejandro H
+ */
 
 public class ArticuloN {
 DaosArticulo dao;  
 Conexion c= new Conexion();
 public ArticuloN(){
-
 dao = new DaosArticulo();
 }// fin constructor
+
 public List<Articulo>listado(){
 
 return dao.ListaArticulo(c.getCon());
 }
+/**
+ * /**
+ * Este metodo recibe un parametro 
+ *
+ * @param codigo
+ * @return lo que obtiene de getArticulo
+ */
 public Articulo  getArticulo(String codigo){
 return dao.getArticulo(c.getCon(),codigo);
 }// fin getProducto
+
+/**
+ * Este es un metodo vacio
+ * @return retorna lo que obtiene de getConsecutivo.
+ */
 public String getConsecutivo(){
 return dao.getConsecutivo(c.getCon());
 }// fin getProducto
 
   
+/**
+ * /**
+ * Este metodo permite guardar un articulo 
+ * contiene parametros
+ * se conecta con la base de datos, 
+ * y muestra mensajes de error.
+ *
+ * @param en
+ * @throws Exception 
+ */
 public void guardarArticulo(Articulo en)throws Exception{
 String codi= en.getCodigo();
 String nombre= en.getNombre();
@@ -67,7 +93,17 @@ throw new Exception(mensajeError);
      mensajeError="El usuario ya esta¡ registrado..";
      throw new Exception(mensajeError);
  }
-}//fin metodo insertarUsuario //regresamos a ArticuloServlet
+}//fin metodo insertarArticulo //regresamos a ArticuloServlet
+
+
+/**
+ * Este metodo permite actualizar un articulo  
+ * define variables y les da un valor,
+ * se conecta con la base de datos, 
+ * y muestra mensajes de error.
+ * @param en
+ * @throws Exception 
+ */
 
 public void actualizarArticulo(Articulo en) throws Exception{
 String codi= en.getCodigo();
@@ -104,6 +140,16 @@ throw new Exception(mensajeError);
       
   }// fin método modificarProducto regresamos al ---->CompraServlet
 
+/**
+ *  Este metodo permite eliminar un articulo 
+ * resive una variable codigo,
+ * define variables y les da un valor,
+ * se conecta con la base de datos, 
+ * y muestra mensajes de error.
+ * @param codigo
+ * @throws Exception 
+ */
+
 public void eliminarArticulo(String codigo) throws Exception{
   String mensajeError="";
   Conexion c = new Conexion();
@@ -121,6 +167,6 @@ if (!"".equals(mensajeError)){
 throw new Exception(mensajeError);   
 }
 
-}//fin método eliminarProducto
+}//fin método eliminarArticulo
     
 }// fin de Articulo
