@@ -2,6 +2,13 @@
 <%@page import="Agrosoft.entidades.Articulo"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+/**
+*
+* @version 2.2 01/07/2015
+* @author Alejandro H.
+**/
+
 <%
 String mensaje = (String) request.getAttribute("mensaje");
 String codigo =request.getParameter("txtcodigo");
@@ -11,7 +18,11 @@ String observacion =request.getParameter("txtobservacin");
 String precio =request.getParameter("txtprecio");
 String codigo_mascota=request.getParameter("txtcodigo_mascota");
 String ed=(String)request.getAttribute("edicion");
-
+/**
+ * En estas lineas estamos llamando parametros 
+ * para trabajar con ellos en este formulario
+ * desde la capa de entidades-Articulo.
+ */
 List<Articulo>LU=
 (List<Articulo>) request.getAttribute("listadoArticulo")!=null?
 (List<Articulo>) request.getAttribute("listadoArticulo"):null;
@@ -32,18 +43,23 @@ observacion="";
 precio="";
 codigo_mascota="";
 }
-
+/*
+ * Aca estamos llamando una lista con algunos 
+ * parametros, tambien ponemos una condicion 
+ * para que si se cumple llame algunos parametros
+ * y si no los deje en blanco.
+ */
 %>
 <!DOCTYPE html>
 <html>
 <head>
 <title>Artículos</title>
-<link href="css/estilo.css" rel="stylesheet" type=""text/css">
-<script type="text/javascript" src="js/validar.js"></script>  
+<link href="css/estilo.css" rel="stylesheet" type=""text/css"> <!--estamos dando la direccion al estilo css-->
+<script type="text/javascript" src="js/validar.js"></script>  <!--le estamos diciendo que necesitamos archivos tipo javascript-->
 
 <style type="text/css">
 input{border-radius: 4px;}
-</style>
+</style> 
 
 </head>
 
@@ -62,7 +78,7 @@ Artículos
 
 
 
-<form name="Formulario" method="post" id="" action="./ArticuloServlet">
+<form name="Formulario" method="post" id="" action="./ArticuloServlet"> <!--permite al usuario ingresar datos y mandarlos a otro archivo que los procese-->
 
 
 <div style="width: 20%; margin: 0 auto;  height:1px; float:left;">
@@ -101,10 +117,10 @@ Artículos
 </tr>
 
 <tr>
-<td>Código<br></td>
+<td>Código<br></td>                                                               <!--Estamos haciendo validacion de solo ingresar numeros-->
 <td></b><br>
 <input type=text name="txtcodigo" placeholder="  Codigo  * "value="<%=codigo%>"   <%=ed%> onkeypress="return numeros(event)" ><br>
-</td>
+</td>                                                <!--Se manda y/o se resive el valor del input-->
 
 <td></td>
 <td></b><br>
@@ -115,10 +131,10 @@ Artículos
 <td></td>
 <td></b><br>
 
-<td>Nombre<br></td>
+<td>Nombre<br></td>                                                     <!--Estamos haciendo validacion de solo ingresar letras-->
 <td></b><br>
 <input type="text" name="txtnombre"placeholder="  Nombre  * " value="<%=nombre%>" onkeypress="return sololetras(event)"><br>
-</td>
+</td>                                          <!--Se manda y/o se resive el valor del input-->
 </tr>
 
 <tr>
@@ -130,7 +146,7 @@ Artículos
 <td>Descripción<br></td>
 <td></b><br>
 <input type=text name="txtdescripcion" placeholder="  Descripcion  * "value="<%=descripcion%>"><br>
-</td>
+</td>                                                  <!--Se manda y/o se resive el valor del input-->
 
 <td></td>
 <td></b><br>
@@ -144,7 +160,7 @@ Artículos
 <td>Observación<br></td>
 <td></b><br>
 <input type=text name="txtobservacion" placeholder="  Observacion  * "value="<%=observacion%>"><br>
-</td>
+</td>                                                    <!--Se manda y/o se resive el valor del input-->
 </tr>
 
 <tr>
@@ -154,9 +170,9 @@ Artículos
 
 <tr>
 <td>Precio<br></td>
-<td></b><br>
+<td></b><br>                                                         <!--Estamos haciendo validacion de solo ingresar numeros-->
 <input type=text name="txtprecio"placeholder="  Precio  * " value="<%=precio%>"onkeypress="return numeros(event)" ><br>
-</td>
+</td>                                         <!--Se manda y/o se resive el valor del input-->
 
 <td></td>
 <td></b><br>
@@ -168,9 +184,9 @@ Artículos
 <td></b><br>
 
 <td>Código de mascota<br></td>
-<td></b><br>
+<td></b><br>                                                                                       <!--Estamos haciendo validacion de solo ingresar numeros-->
 <input type=text name="txtcodigo_mascota"placeholder="  Codigo Mascota  * " value="<%=codigo_mascota%>"onkeypress="return numeros(event)" ><br>
-</td>
+</td>                                                          <!--Se manda y/o se resive el valor del input-->
 </tr>
 </table>
 
@@ -188,8 +204,9 @@ Artículos
 <br>
 <br> 
 <center>
+  <!--Aca se hace una condicion para crear y llamar la lista con los datos respectivos-->
 <%if (LU != null) {%>
-<table border="1" >
+<table border="1" ><!--Se crea la lista-->
 <tr>                
 <td style="background:orange" >Código</td>
 <td style="background:orange">Nombre</td>
@@ -200,7 +217,7 @@ Artículos
 
 </tr>
 <!--Listar datos en jsp -->
-<%for (Articulo us : LU) {%>
+<%for (Articulo us : LU) {%><!--Se hace una condicion para despues obtener los datos respectivos y trabajar con ellos-->
 <tr>
 <td><%=us.getCodigo()%> </td>
 <td><%=us.getNombre()%> </td>

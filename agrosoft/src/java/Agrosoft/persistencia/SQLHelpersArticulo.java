@@ -10,7 +10,9 @@ package Agrosoft.persistencia;
  * persistencia, estos métodos
  * generalmente nos van a retornar
  * un String
- * @author USER
+ * 
+ * @version 2.2 01/07/2015
+ * @author Alejandro H
  */
 public class SQLHelpersArticulo {
 public static String getArticulo(){
