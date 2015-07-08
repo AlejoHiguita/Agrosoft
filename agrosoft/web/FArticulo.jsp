@@ -3,11 +3,6 @@
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-/**
-*
-* @version 2.2 01/07/2015
-* @author Alejandro H.
-**/
 
 <%
 String mensaje = (String) request.getAttribute("mensaje");
