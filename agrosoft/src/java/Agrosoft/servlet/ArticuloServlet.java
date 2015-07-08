@@ -11,8 +11,25 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * Esta clase nos va permitir
+ * crear condicionales y/o metodos los cuales van a ser
+ * llamados en el formulario y son los 
+ * responsables de hacer los procedimientos
+ * es estos.
+ * 
+ * @version 2.2 01/07/2015
+ * @author Alejandro H
+ */
 public class ArticuloServlet extends HttpServlet {
 
+/**
+ * 
+ * @param request
+ * @param response
+ * @throws ServletException
+ * @throws IOException 
+ */
 protected void processRequest(HttpServletRequest request, HttpServletResponse response)
 throws ServletException, IOException {
 response.setContentType("text/html;charset=UTF-8");
@@ -34,6 +51,7 @@ request.setAttribute("edicion", "");
 request.setAttribute("targetModulo", modulo);
 Articulo entArticulo=new Articulo();
 
+
 // para mostrar todos(boton Mostrar)
 if("mostrar".equals(request.getParameter("action"))){
 try{
@@ -50,7 +68,6 @@ request.setAttribute("mensaje", e.getMessage());
 } // fin exception
 }// fin Mostrar todos ---> Regresamos a FUsuario.jsp
 // botón buscar
-
 
 if("buscar".equals(request.getParameter("action"))){
 try{
